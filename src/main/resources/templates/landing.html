@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Comenzando en el MVC mamalon</title>
+</head>
+<body>
+	<p th:text="'Que pedo ese mi perro, ' + ${name} + '!!'" />
+	<table>
+		<th:block th:each="per : ${personas}">
+			<tr>
+				<td th:text="${per.IdPersona}">|</td>
+				<td th:text="${per.nombre}">|</td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
